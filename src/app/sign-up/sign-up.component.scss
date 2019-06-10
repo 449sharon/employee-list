@@ -1,0 +1,17 @@
+div .sm-jumbotron{
+  margin:0px;
+  padding:2rem;
+  background-color:rgb(35, 99, 163);
+  color :white;
+
+}
+button .btn-submit{
+  background-color: rgb(35, 62, 88);
+  color:white;
+  width:100%;
+
+}
+input.ng-invalid.ng-dirty{
+  border-bottom-color:red !important;
+  box-shadow: 0 1px 0 0 red !important;
+}

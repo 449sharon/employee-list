@@ -1,0 +1,188 @@
+<head>
+  </head>
+  <body>
+  <div class="containerr">
+    <div class ="row-top">
+      <div class ="col-md-8">
+        <h1>{{title}}</h1>
+        </div>
+      
+          <div class ="col-md-4">
+            <div class ="alert alert-success alert-dismissable" *ngIf="msg">
+              <a href ="#" class ="close" (click)="clickMe()">&times;</a>
+            <p>{{msg}}</p>
+            </div>
+          </div>
+        
+        <div class ="clearfix"></div>
+        <hr>
+      
+    </div>
+      <!-- first form -->
+    <div class="forms-column">
+      <div class="f1 f">
+          <h2> Create Employee -List:</h2>
+          <!-- Cform -->
+          <form action="index.html" class="Cform form">
+              <div class="inrow">
+                <div class="col-25">
+               
+                </div>
+                <div class="col-75">
+                  <input type="text" id="fname" name="firstname" [(ngModel)] ="model.name"placeholder="Your name..">
+                </div>
+              </div>
+            <div class="inrow">
+              <div class="col-25">
+             
+              </div>
+              <div class="col-75">
+                <input type="text" id="lname" name="lastname" [(ngModel)] ="model.lastName"placeholder="Your last name..">
+              </div>
+            </div>
+              <div class="inrow">
+                  <div class="col-25">
+                  
+                  </div>
+                  <div class="col-75">
+                    <input type="text" id="lastname" name="contact"[(ngModel)] ="model.contact" placeholder="Your contact..">
+                  </div>
+            </div>
+            <div class="inrow">
+              <div class="col-75">
+                <select  name="gender" [(ngModel)]="model.gender">
+                  <option style="color: black;" value="Female" selected>Female</option>
+                  <option style="color: black;" value="Male" >Male</option>
+                </select>
+              </div>
+            </div>
+            <div class="inrow">
+                <div class="col-25">
+              
+                </div>
+                <div class="col-75">
+                  <input type="text" id="lastname" name="Organizational-Unit"[(ngModel)] ="model.organizationUnit" placeholder="Your Organizational-Unit..">
+                </div>
+          </div>
+            <div class="inrow">
+              <div class="col-25">
+            
+              </div>
+              <div class="col-75">
+                <textarea id="subject" name="subject"[(ngModel)] ="model.bio" placeholder="Write something.." style="height:200px"></textarea>
+              </div>
+            </div>
+            <div class="inrow">
+                <div class="col-25">
+                  </div>
+                  <div class="col-75">
+                    <button type="submit"  (click)="addEmployee()">Save</button>
+                  </div>
+              
+            </div>
+            </form>
+      </div>
+      <div class="f2 f">
+          <h2>Update Employee Data</h2>
+          <div >
+            <!-- Uform -->
+              <form action="/action_page.php" class="Uform form">
+              <div class="inrow">
+                <div class="col-25">
+             
+                </div>
+                <div class="col-75">
+                  <input type="text" id="fname" name="firstname" [(ngModel)] ="model2.name"placeholder="Your name..">
+                </div>
+              </div>
+              <div class="inrow">
+                <div class="col-25">
+               
+                </div>
+                <div class="col-75">
+                  <input type="text" id="lname" name="lastname" [(ngModel)] ="model2.lastName"placeholder="Your last name..">
+                </div>
+              </div>
+                <div class="inrow">
+                    <div class="col-25">
+                
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="lastname" name="contact"[(ngModel)] ="model2.contact" placeholder="Your Contact..">
+                    </div>
+              </div>
+              <div class="inrow">
+                <div class="col-25">
+         
+                </div>
+                <div class="col-75">
+                
+                  <select id="gender" name="gender"[(ngModel)] ="model2.gender">
+                    <option selected> Gender</option>
+                    <option value="Female">female</option>
+                    <option value="Male" >Male</option>
+                  
+                  </select>
+                </div>
+              </div>
+              <div class="inrow">
+                  <div class="col-25">
+                
+                  </div>
+                  <div class="col-75">
+                    <input type="text" id="lastname" name="organizationUnit"[(ngModel)] ="model2.organizationUnit" placeholder="Your Organizational-Unit..">
+                  </div>
+            </div>
+              <div class="inrow">
+                <div class="col-25">
+             
+                </div>
+                <div class="col-75">
+                  <textarea id="subject" name="subject"[(ngModel)] ="model2.bio" placeholder="Write something.." style="height:200px"></textarea>
+                </div>
+              </div>
+              <div class="inrow">
+                  <div class="col-25">
+                   
+                  </div>
+                  <div class="col-75">
+                   <button type="submit"  (click)="updateEmployee()">Update</button>
+                  </div>
+                </div>
+              <div class="inrow">
+                
+              </div>
+              </form>
+            </div>
+      </div>
+    </div>
+    
+  
+    <h2> Read data &(Delete data):</h2>
+  <div class="table">
+      <table>
+          <tr>
+            <td> NAME</td>
+            <td> LastName</td>
+            <td width="200px"> contact</td>
+            <td width="100px"> Gender</td>
+            <td width="200px"> Organizational-Unit</td>
+            <td width="700px"> Bio</td>
+            <td width="200px"> Action</td>
+          </tr>
+          <tr *ngFor="let employee of employee; let i=index" class="newInfo">
+                <td>{{employee.name}}</td>
+                <td>{{employee.lastName}}</td>
+                <td>{{employee.contact}}</td>
+                <td>{{employee.gender}}</td>
+                <td>{{employee.organizationUnit}}</td>
+                <td>{{employee.bio}}</td>
+                <td> <button type="submit" (click)="editEmployee(i)" class="edit">Edit</button>
+                  <button type="submit" (click)="deleteEmployee(i)" class="delete">Delete</button></td>
+            </tr>
+              
+          </table>
+  </div>
+  
+</div>
+  </body>

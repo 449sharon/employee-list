@@ -1,0 +1,60 @@
+.container {
+	background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../assets/architecture-building-downtown-510620.jpg);
+	background-size: cover;
+	background-position: center center;
+	height: 100vh;
+	border: 5px lightseagreen solid;
+}
+#header {
+	margin: 0 auto;
+	max-width: 300px;
+	position: relative;
+}
+form {
+	max-width: 300px;
+	background: #f8f8f8;
+	padding: 20px;
+	border-radius: 7px;
+	box-shadow: 0 0 6px #dddddd;
+	
+}
+.form-group {
+	margin-top: 10px;
+
+}
+input {
+	width: 100%;
+	margin-left: -13px;
+	padding: 10px;
+
+}
+.btn-submit {
+	border: none;
+	padding: 10px;
+	background: rgb(71, 58, 68);
+	color: #fff;
+	width: 100%;
+
+}
+.btn-submit:hover {
+	background: rgb(211, 100, 137);
+	transition: 1s;
+}
+.wrapper {
+	margin: 0 auto;
+	position: relative;
+	max-width: 1200px;
+
+	top: 40px;
+	padding: 20px;
+	box-shadow: 0 0 5px #dddddd;
+	
+}
+.colab {
+	margin-top: 70px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.colab h2 {
+	margin-bottom: 30px;
+	margin-left: 40px;
+}
